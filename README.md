@@ -1,0 +1,1 @@
+# Afghan-AI-paletforme
