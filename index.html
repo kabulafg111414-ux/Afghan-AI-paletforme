@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08664f"><meta name="description" content="Afghan AI — معلم هوشمند برای دانش‌آموزان افغانستان">
+<link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/styles.css">
+<title>Afghan AI | معلم هوشمند افغانستان</title>
+</head>
+<body>
+<header class="topbar">
+  <button class="mobile-menu" id="mobileMenu" aria-label="باز کردن منو">☰</button>
+  <a class="brand" href="#" data-page="dashboard"><div class="logo">AI</div><div><strong>Afghan AI</strong><small id="brandSub">معلم هوشمند افغانستان</small></div></a>
+  <div class="top-actions">
+    <select id="uiLanguage" class="lang-select" aria-label="زبان رابط"><option value="fa">دری</option><option value="ps">پښتو</option><option value="en">English</option></select>
+    <button id="installBtn" class="outline hidden">نصب اپلیکیشن</button><button id="themeBtn" class="icon-btn" aria-label="تغییر حالت">◐</button>
+    <button class="avatar" id="profileBtn" title="پروفایل">م</button>
+  </div>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <div class="profile"><div class="profile-icon">🎓</div><div><b id="welcomeSmall">خوش آمدید!</b><small id="roleLabel">دانش‌آموز مهمان</small></div></div>
+  <button class="nav active" data-page="dashboard"><span class="nav-icon">⌂</span><span data-i18n="navHome">صفحهٔ اصلی</span></button>
+  <button class="nav" data-page="tutor"><span class="nav-icon">✦</span><span data-i18n="navTutor">معلم هوشمند</span></button>
+  <button class="nav" data-page="lessons"><span class="nav-icon">▤</span><span data-i18n="navLessons">درس‌ها</span></button>
+  <button class="nav" data-page="quiz"><span class="nav-icon">☑</span><span data-i18n="navQuiz">امتحان آزمایشی</span></button>
+  <button class="nav" data-page="progress"><span class="nav-icon">▥</span><span data-i18n="navProgress">پیشرفت من</span></button>
+  <button class="nav" data-page="family"><span class="nav-icon">♧</span><span data-i18n="navFamily">والدین و استاد</span></button>
+  <button class="nav" data-page="admin"><span class="nav-icon">⚙</span><span data-i18n="navAdmin">مدیریت</span></button>
+  <button class="nav" data-page="sources"><span class="nav-icon">ⓘ</span><span>منابع و سپاسگزاری</span></button>
+  <div class="side-bottom"><div class="help-card"><b data-i18n="needHelp">کمک درسی می‌خواهی؟</b><p data-i18n="helpText">سوالت را بنویس تا با هم بررسی کنیم.</p><button data-page="tutor" class="link-button" data-i18n="askTutor">پرسش از معلم ←</button></div><small>Afghan AI • MVP 2.0</small></div>
+</aside>
+<main class="main">
+<section id="dashboardPage" class="page">
+  <div class="welcome"><div><span class="eyebrow" data-i18n="eyebrow">آینده با دانش ساخته می‌شود</span><h1 data-i18n="welcomeTitle">سلام! آمادهٔ یادگیری هستی؟ 👋</h1><p data-i18n="welcomeDesc">هر روز یک قدم کوچک، یک پیشرفت بزرگ.</p><button class="welcome-cta" data-page="tutor" data-i18n="startLearning">یادگیری را آغاز کن ←</button></div><div class="hero-art">📚<span>✦</span></div></div>
+  <div class="license-strip" aria-label="اطلاعیه مالکیت فکری"><div class="shield">♢</div><div><b>License &amp; Intellectual Property</b><p>این پروژه و محتوای اختصاصی آن متعلق به <strong>Sayed Moheb Ullah Hashimi</strong> است. استفاده آموزشی و شخصی با ذکر منبع مجاز است؛ استفاده تجارتی، بازتوزیع یا تغییر نسخه اختصاصی نیازمند اجازه کتبی مالک می‌باشد.</p><small>© 2026 Afghan AI · Founder &amp; Owner: Sayed Moheb Ullah Hashimi</small></div></div>
+  <div class="stats">
+    <div class="stat"><span>📘</span><small data-i18n="statLessons">درس‌های تکمیل‌شده</small><b id="statLessons">۰</b></div>
+    <div class="stat"><span>🎯</span><small data-i18n="statGoal">هدف روزانه</small><b>۲۰ دقیقه</b></div>
+    <div class="stat"><span>🔥</span><small data-i18n="statQuestions">پرسش‌های مطرح‌شده</small><b id="statQuestions">۰</b></div>
+  </div>
+  <div class="section-head"><div><h2 data-i18n="continueLearning">یادگیری را ادامه بده</h2><p data-i18n="chooseSection">یک بخش را انتخاب کن.</p></div><button class="text-button" data-page="lessons" data-i18n="allLessons">همهٔ درس‌ها ←</button></div>
+  <div class="feature-grid">
+    <button class="feature green" data-page="tutor"><div class="feature-icon">✦</div><h3 data-i18n="featureTutor">معلم هوشمند</h3><p data-i18n="featureTutorDesc">سوال بپرس و توضیح ساده بگیر.</p><span data-i18n="openSection">باز کردن بخش ←</span></button>
+    <button class="feature blue" data-page="lessons"><div class="feature-icon">📚</div><h3 data-i18n="featureLessons">کتابخانهٔ درسی</h3><p data-i18n="featureLessonsDesc">موضوعات آموزشی را مرور کن.</p><span data-i18n="openSection">باز کردن بخش ←</span></button>
+    <button class="feature amber" data-page="quiz"><div class="feature-icon">☑</div><h3 data-i18n="featureQuiz">امتحان آزمایشی</h3><p data-i18n="featureQuizDesc">دانسته‌هایت را بررسی کن.</p><span data-i18n="openSection">باز کردن بخش ←</span></button>
+  </div>
+  <div class="notice"><span>💡</span><div><b data-i18n="tipTitle">نکتهٔ امروز</b><p data-i18n="tipText">وقتی درس دشوار است، از معلم بخواه آن را با یک مثال روزمره توضیح دهد.</p></div></div>
+  <footer>Afghan AI <span>•</span> بنیان‌گذار: سیدمحب‌الله (هاشمی) <span>•</span> نسخهٔ توسعه‌ای</footer>
+</section>
+
+<section id="tutorPage" class="page hidden">
+ <div class="page-title"><span class="eyebrow" data-i18n="alwaysReady">همیشه آمادهٔ کمک</span><h1 data-i18n="tutorTitle">✦ معلم هوشمند</h1><p data-i18n="tutorDesc">سوال درسی‌ات را به دری، پشتو یا انگلیسی بنویس.</p></div>
+ <div class="chat-card"><div class="chat-head"><div class="bot-avatar">✦</div><div><b>Afghan AI Tutor</b><small><i></i><span data-i18n="ready">آمادهٔ گفتگو</span></small></div><select id="answerLanguage" aria-label="زبان پاسخ"><option value="fa">پاسخ به دری</option><option value="ps">ځواب په پښتو</option><option value="en">Answer in English</option></select></div>
+ <div id="messages" class="messages"><div class="bubble bot" data-i18n="greeting">سلام دانش‌آموز عزیز! 🌟\nامروز در کدام درس کمکت کنم؟ سوالت را بنویس تا ساده و مرحله‌به‌مرحله توضیح بدهم.</div></div>
+ <div class="quick-prompts"><button>کسر چیست؟</button><button>فتوسنتز را تشریح کن</button><button>در ریاضی کمکم کن</button><button>Explain gravity</button></div>
+ <form id="chatForm" class="chat-input"><textarea id="question" rows="1" placeholder="سوالت را اینجا بنویس..." required></textarea><button type="submit" aria-label="ارسال">➤</button></form><p class="disclaimer" data-i18n="aiDisclaimer">پاسخ‌های هوش مصنوعی ممکن است اشتباه باشند؛ مطالب مهم را با کتاب درسی و استاد بررسی کن.</p></div>
+</section>
+
+<section id="lessonsPage" class="page hidden">
+ <div class="page-title"><span class="eyebrow" data-i18n="organizedLearning">یادگیری منظم</span><h1 data-i18n="lessonsTitle">📚 درس‌ها و مضامین</h1><p data-i18n="lessonsDesc">صنف و مضمون مورد نظر خود را انتخاب کن.</p></div>
+ <div class="filters"><label><span data-i18n="gradeLabel">صنف</span><select id="grade"><option>صنف اول</option><option>صنف دوم</option><option>صنف سوم</option><option selected>صنف چهارم</option><option>صنف پنجم</option><option>صنف ششم</option><option>صنف هفتم</option><option>صنف هشتم</option><option>صنف نهم</option><option>صنف دهم</option><option>صنف یازدهم</option><option>صنف دوازدهم</option></select></label><label><span data-i18n="searchLabel">جستجو</span><input id="lessonSearch" placeholder="نام مضمون یا موضوع..."></label></div>
+ <div id="lessonGrid" class="subject-grid"></div>
+ <div id="lessonDetail" class="lesson-detail hidden"></div>
+ <p class="disclaimer" data-i18n="curriculumNote">محتوای رسمی کتاب‌های معارف باید از نسخه‌های معتبر وزارت معارف وارد و بررسی شود. این درس‌ها نمونهٔ آموزشی هستند.</p>
+</section>
+
+<section id="quizPage" class="page hidden">
+ <div class="page-title"><span class="eyebrow" data-i18n="testYourself">خودت را بسنج</span><h1 data-i18n="quizTitle">☑ امتحان آزمایشی</h1><p data-i18n="quizDesc">یک آزمون کوتاه نمونه را انجام بده.</p></div>
+ <div class="quiz-card"><div class="quiz-progress"><span id="quizCount">سوال ۱ از ۵</span><div><span id="quizBar"></span></div></div><h2 id="quizQuestion"></h2><div id="quizOptions" class="quiz-options"></div><p id="quizFeedback" aria-live="polite"></p><button id="nextQuestion" class="primary" disabled>سوال بعدی ←</button></div>
+</section>
+
+<section id="progressPage" class="page hidden">
+ <div class="page-title"><span class="eyebrow" data-i18n="stepByStep">قدم به قدم</span><h1 data-i18n="progressTitle">▥ پیشرفت من</h1><p data-i18n="progressDesc">آمار یادگیری در همین دستگاه ذخیره می‌شود.</p></div>
+ <div class="progress-grid"><div class="progress-card"><small data-i18n="statQuestions">پرسش‌های مطرح‌شده</small><b id="progressQuestions">۰</b><span>💬</span></div><div class="progress-card"><small data-i18n="quizzesDone">آزمون‌های تکمیل‌شده</small><b id="progressQuizzes">۰</b><span>🏆</span></div><div class="progress-card"><small data-i18n="correctAnswers">پاسخ‌های درست</small><b id="progressCorrect">۰</b><span>⭐</span></div></div>
+ <div class="section-head spaced"><div><h2 data-i18n="recentActivity">فعالیت اخیر</h2><p data-i18n="activityDesc">خلاصهٔ فعالیت‌های ثبت‌شده در این مرورگر.</p></div><button class="outline" id="resetProgress" data-i18n="resetStats">پاک‌کردن آمار</button></div><div id="activityList" class="activity-list"></div>
+ <div class="notice"><span>🔒</span><div><b data-i18n="privacyTitle">حریم خصوصی</b><p data-i18n="privacyText">این نسخه آمار را فقط در مرورگر دستگاه ذخیره می‌کند. برای حساب و همگام‌سازی باید سرور امن اضافه شود.</p></div></div>
+</section>
+
+<section id="familyPage" class="page hidden">
+ <div class="page-title"><span class="eyebrow" data-i18n="supportTeam">همکاری برای یادگیری بهتر</span><h1 data-i18n="familyTitle">♧ بخش والدین و استاد</h1><p data-i18n="familyDesc">ابزارهای پیشنهادی برای حمایت از یادگیری دانش‌آموز.</p></div>
+ <div class="feature-grid two">
+  <div class="info-card"><div class="feature-icon blue">👨‍👩‍👧</div><h3 data-i18n="parentTitle">راهنمای والدین</h3><p data-i18n="parentDesc">برای کودک برنامهٔ منظم بسازید، پیشرفت را با او مرور کنید و هنگام استفاده از هوش مصنوعی همراهش باشید.</p><ul><li>۲۰ دقیقه یادگیری روزانه</li><li>استراحت کوتاه میان درس‌ها</li><li>بررسی پاسخ‌ها با کتاب مکتب</li></ul></div>
+  <div class="info-card"><div class="feature-icon green">👨‍🏫</div><h3 data-i18n="teacherTitle">راهنمای استاد</h3><p data-i18n="teacherDesc">از معلم هوشمند برای توضیح دوبارهٔ موضوع و ساخت تمرین کمکی استفاده کنید؛ نه به‌عنوان جایگزین استاد.</p><ul><li>تهیهٔ سوالات تمرینی</li><li>توضیح با مثال‌های محلی</li><li>بازبینی صحت علمی محتوا</li></ul></div>
+ </div>
+ <div class="notice"><span>🛡️</span><div><b data-i18n="childSafety">ایمنی دانش‌آموزان</b><p data-i18n="childSafetyText">در این نسخه اطلاعات حساس، شماره تماس، آدرس یا اسناد هویتی وارد نکنید. ساخت حساب کودک نیازمند بررسی حریم خصوصی و رضایت مناسب است.</p></div></div>
+</section>
+
+<section id="adminPage" class="page hidden">
+ <div class="page-title"><span class="eyebrow">Founder workspace</span><h1>⚙ پنل مدیریت Afghan AI</h1><p>نمای اولیهٔ امکانات مورد نیاز بنیان‌گذار و تیم محتوا.</p></div>
+ <div class="admin-banner"><div class="admin-mark">AI</div><div><b>Afghan AI — پنل بنیان‌گذار</b><p>بنیان‌گذار: سیدمحب‌الله (هاشمی)</p><small>این پنل در حال حاضر نمایشی است؛ ورود امن و نقش‌های مدیریتی هنوز پیاده‌سازی نشده‌اند.</small></div></div>
+ <div class="admin-grid"><div class="admin-card"><span>📚</span><b>مدیریت محتوا</b><p>ثبت و بازبینی درس‌ها و منابع معتبر.</p><em>در نقشهٔ راه</em></div><div class="admin-card"><span>👥</span><b>مدیریت کاربران</b><p>نقش دانش‌آموز، استاد و سرپرست.</p><em>نیازمند بک‌اند امن</em></div><div class="admin-card"><span>📈</span><b>گزارش‌ها</b><p>آمار استفاده و کیفیت پاسخ‌ها.</p><em>در نقشهٔ راه</em></div><div class="admin-card"><span>🛡️</span><b>امنیت و حریم خصوصی</b><p>کنترل دسترسی و حفاظت از داده‌ها.</p><em>پیش‌شرط انتشار</em></div></div>
+ <div class="notice"><span>🔧</span><div><b>وضعیت سرویس هوش مصنوعی</b><p id="apiStatus">وضعیت اتصال از سرور بررسی نشده است.</p><button id="checkApi" class="text-button">بررسی اتصال ←</button></div></div>
+</section>
+
+<section id="sourcesPage" class="page hidden">
+ <div class="page-title"><span class="eyebrow">Sources & Acknowledgements</span><h1>📖 منابع و سپاسگزاری</h1><p>منابعی که برای آشنایی و پژوهش بیشتر دربارهٔ آموزش و افغانستان معرفی شده‌اند.</p></div>
+ <div class="info-card" style="max-width:850px">
+  <div class="feature-icon blue">🌐</div>
+  <h2>AI for Afghanistan (AI4Afghanistan) e.V.</h2>
+  <p>این نام بر اساس تصویر منبعی که ارائه کرده‌اید، به‌عنوان یک مرجع پیشنهادی برای مطالعه بیشتر درج شده است.</p>
+  <p><b>یادداشت:</b> درج این نام صرفاً جهت معرفی منبع است و به معنای همکاری رسمی، تأیید، حمایت یا وابستگی سازمانی میان AI4Afghanistan و Afghan AI نیست.</p>
+  <p><b>لینک منبع:</b> لینک Google Share موجود در تصویر ناقص است؛ بنابراین برای جلوگیری از درج لینک نادرست، فعلاً لینک قابل کلیک اضافه نشده است.</p>
+  <p>اگر لینک کامل یا وب‌سایت رسمی سازمان را بفرستید، این بخش را با پیوند مستقیم و توضیح دقیق‌تر به‌روزرسانی می‌کنیم.</p>
+ </div>
+ <footer>Afghan AI <span>•</span> بنیان‌گذار: سیدمحب‌الله (هاشمی) <span>•</span> منابع و سپاسگزاری</footer>
+</section>
+</main></div>
+<script src="/app.js"></script>
+</body></html>
